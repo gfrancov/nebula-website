@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Si estas llegint això, és que ets un informàtic massa tafaner. */
+ul,a {
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial;
+}
+
+/* Barra de navegació */
+nav {
+    background-color: #FFFFFF;
+    display: grid;
+    padding-bottom: 16px;
+    grid-template-columns: 15% 5% auto 15%;
+    grid-template-rows: 20px auto;
+    border-bottom: 1px solid #b042b4;
+}
+.nav-logo {
+    width: 80px;
+    grid-column: 2;
+    grid-row: 2;
+}
+nav ul {
+    text-align: right;
+    grid-column: 3;
+    grid-row: 2;
+}
+nav ul li {
+    display: inline;
+    padding: 30px;
+}
+nav ul li a {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 20px;
+}
+nav ul li a:hover {
+    color: rgb(37, 37, 37);
+    opacity: 0.7;
+}
+nav ul li.login a {
+    background-color: #b042b4;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 3px solid #b042b4;
+    border-radius: 40px;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+nav ul li.login a:hover {
+    background-color: #ffffff;
+    color: #b042b4;
+    opacity: 1;
+}
+/* Grid de Barra de navegació */
+    @media (max-width: 700px) {
+        nav {
+            grid-template-columns: 5% auto 5%;
+            grid-template-rows: 20px auto auto;
+            text-align: center;
+            justify-content: center;
+        }
+        .nav-logo {
+            grid-column: 2;
+            grid-row: 2;
+            text-align: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        nav ul {
+            grid-column: 2;
+            grid-row: 3;
+            text-align: center;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+    }
+
+/* Header */
+header {
+    background-image: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 450px;
+    margin-top: 0px;
+}
+.header-serveis {
+    height: 300px;
+}
+header .text-header {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 120px;
+}
+.header-serveis .text-header {
+    padding-top: 70px;
+}
+.header-titol {
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+.header-subtitol {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+.div-header-boto {
+    margin-top: 30px;
+}
+.header-boto {
+    font-size: 20px;
+    border: 3px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 10px;
+    padding-right: 13px;
+    padding-left: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.header-boto:hover {
+    background-color: #FFFFFF;
+    color: #3c0b5e;
+}
+    /* Grid Header */
+    @media (max-width: 700px) {
+        .header-titol {
+            font-size: 40px;
+        }
+        .header-subtitol {
+            font-size: 17px;
+        }
+        .header-boto {
+            border: 1px solid #FFFFFF;
+            font-size: 17px;
+            font-weight: 400;
+        }
+    }
+
+/* Separador */  
+.separador-header {
+    margin-top: -200px;
+    height: 60px;
+    width: 100%;
+}
+
+/* Pre Serveis */
+.pre-serveis {
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: auto;
+    margin: 0;
+}
+.pre-serveis div {
+    text-align: center;
+    margin: 2px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+.icona-servei {
+    margin: 0;
+    padding: 0;
+}
+.boto-servei {
+    margin-top: 30px;
+}
+.boto-servei a {
+    background-color: #b042b4;
+    padding: 5px;
+    color: #FFFFFF;
+    border: 3px solid #b042b4;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.boto-servei a:hover {
+    background-color: #FFFFFF;
+    color: #b042b4;
+}
+.titol-servei {
+    margin: 0;
+    margin-top: 7px;
+    padding: 0;
+    font-size: 24px;
+}
+#pre-servei-hosting {
+    grid-column: 2;
+    grid-row: 1;
+}
+#pre-servei-cms {
+    grid-column: 3;
+    grid-row: 1;
+}
+#pre-servei-https {
+    grid-column: 4;
+    grid-row: 1;
+}
+    /* Grid pre serveis */
+    @media (max-width: 500px) {
+        .pre-serveis {
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto;
+        }
+        .pre-serveis div {
+            margin: 20px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        #pre-servei-hosting {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        #pre-servei-cms {
+            grid-column: 1;
+            grid-row: 2;
+            background-color: #f5f5f5;
+        }
+        #pre-servei-https {
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
+
+/* Suport */
+.necessites-suport {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: 70px auto;
+    background-color: #f5f5f5;
+    padding-bottom: 60px;
+    padding-top: 30px;
+}
+.necessites-suport div {
+    margin: 10px;
+}
+.titol-suport {
+    font-size: 30px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    color: #3c0b5e;
+}
+.titol-suport-opcio {
+    color: #b042b4;
+    margin: 0;
+}
+.text-suport-opcio {
+    margin: 0;
+}
+.boto-suport-opcio a {
+    color: #3c0b5e;
+}
+#suport-telegram {
+    grid-column: 2;
+    grid-row: 2;
+}
+#suport-discord {
+    grid-column: 3;
+    grid-row: 2;
+}
+#suport-ticket {
+    grid-column: 4;
+    grid-row: 2;
+}
+    /* Grid pre serveis */
+    @media (max-width: 500px) {
+        .necessites-suport {
+            grid-template-columns: auto;
+            grid-template-rows: 70px auto auto auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .titol-suport {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        #suport-telegram {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #suport-discord {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        #suport-ticket {
+            grid-column: 1;
+            grid-row: 4;
+        }
+    }
+
+/* Continguts */
+.contingut {
+    background-color: #ffffff;
+    padding: 20px;
+}
+.requadre-advert {
+    background-color: rgb(255, 202, 202);
+    padding: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 1px solid red;
+}
+
+/* Hosting */
+.servei-hosting {
+    display: grid;
+    grid-template-columns: 15% auto auto auto 15%;
+    grid-template-rows: auto;
+    margin-top: 25px;
+}
+.titol-contingut {
+    margin-left: 15%;
+}
+#servei-hosting-starter {
+    grid-column: 2;
+    grid-row: 2;
+}
+#servei-hosting-starter h2 {
+    color: rgb(224, 186, 17);
+    font-weight: 500;
+}
+#servei-hosting-starter .servei-comprar a {
+    background-color: #b042b4;
+    border: 2px solid #b042b4;
+}
+#servei-hosting-basic {
+    grid-column: 3;
+    grid-row: 2;
+}
+#servei-hosting-basic h2 {
+    color: rgb(218, 118, 4);
+    font-weight: 600;
+}
+#servei-hosting-basic .servei-comprar a {
+    background-color: #b042b4;
+    border: 2px solid #b042b4;
+}
+#servei-hosting-enterprise {
+    grid-column: 4;
+    grid-row: 2;
+}
+#servei-hosting-enterprise h2 {
+    color: rgb(226, 57, 6);
+    font-weight: 700;
+}
+#servei-hosting-enterprise .servei-comprar a {
+    background-color: #b042b4;
+    border: 2px solid #b042b4;
+}
+.servei-ofert {
+    text-align: center;
+    border-radius: 15px;
+    margin: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
+}
+/* Responsive caixes serveis ( 1 ) */
+@media (max-width: 1200px) {
+    .servei-ofert {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+}
+/* Telèfon responsive */
+@media (max-width: 700px) {
+    .servei-hosting {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+    #servei-hosting-starter {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #servei-hosting-basic {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #servei-hosting-enterprise {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .servei-ofert {
+        margin-left: 0;
+        margin-right: 0;
+        border: none;
+        -webkit-box-shadow: 0;
+        -moz-box-shadow: 0;
+        box-shadow: 0;
+    }
+    .titol-contingut {
+        margin-left: 5px;
+    }
+}
+.servei-preu {
+    font-size: 19px;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 700;
+    color: #3c0b5e;
+}
+.servei-comprar a {
+    background-color: black;
+    padding: 4px;
+    padding-right: 9px;
+    padding-left: 9px;
+    border: 2px solid black;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.servei-caracteristiques ul {
+    margin: 0;
+    padding: 0;
+}
+/* Addicionals */
+.addicionals {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-rows: 80px auto;
+}
+.capcalera-addicionals {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1;
+    margin-left: 20%;
+}
+#servei-instalacio-cms {
+    grid-column: 2;
+    grid-row: 2;
+}
+#servei-instalacio-cms .titol-addicional {
+    color: rgb(8, 196, 196);
+}
+#servei-instalacio-cms .servei-comprar a {
+    background-color: rgb(8, 196, 196);
+    border: 2px solid rgb(8, 196, 196);
+}
+#servei-certificat-https {
+    grid-column: 3;
+    grid-row: 2;
+}
+#servei-certificat-https .titol-addicional {
+    color: rgb(4, 160, 4);
+}
+#servei-certificat-https .servei-comprar a {
+    background-color: rgb(4, 160, 4);
+    border: 2px solid rgb(4, 160, 4);
+}
+
+.titol-addicionals {
+    font-weight: 500;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+.text-addicionals {
+    margin: 0;
+    padding: 0;
+}
+.servei-addicional {
+    justify-items: top;
+    text-align: center;
+    border-radius: 15px;
+    margin: 20%;
+    margin-top: 30px;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.75);
+}
+    /* Responsive inicial */
+    @media (max-width: 1200px) {
+        .addicionals {
+            grid-template-rows: 120px auto;
+            grid-template-columns: 10% 40% 40% 10%;
+        }
+        .servei-addicional {
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+    }
+    /* Telèfon responsive */
+    @media (max-width: 700px) {
+        .addicionals {
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto;
+            margin: 0;
+            margin-top: 40px;
+        }
+        .capcalera-addicionals {
+            grid-column: 1;
+            grid-row: 1;
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+        #servei-instalacio-cms {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #servei-certificat-https {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .servei-addicional {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+.icona-addicional {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+.titol-addicional {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.color-lila {
+    color: #b042b4;
+}
+
+
+/* Footer */
+footer {
+    background-color: rgb(31, 31, 31);
+    display: grid;
+    padding-top: 50px;
+    grid-template-columns: 5% 60% 30% 5%;
+    grid-template-rows: auto;
+    margin-top: 70px;
+    padding-bottom: 30px;
+}
+.footer-esq {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+}
+.footer-esq p {
+    color: #bdbdbd;
+    margin: 0;
+    margin-top: 6px;
+    padding: 0;
+}
+.footer-dret {
+    grid-column: 3;
+    grid-row: 1;
+}
+.footer-logo {
+    width: 50px;
+    opacity: 0.7;
+}
+.footer-dret-titol {
+    color: #bdbdbd;
+    margin: 0;
+    padding: 0;
+}
+.footer-dret ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+    margin-top: 4px;
+}
+.footer-dret ul li a {
+    color: #bdbdbd;
+    font-weight: 500;
+}
+.footer-dret ul li a:hover {
+    color: #FFFFFF;
+}
+    /* Grid pre serveis */
+    @media (max-width: 600px) {
+        footer {
+            grid-template-columns: 5% auto 5%;
+            grid-template-rows: auto auto;
+        }
+        .footer-esq {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .footer-dret {
+            grid-column: 2;
+            grid-row: 2;
+            margin: auto auto;
+            margin-top: 30px;
+        }
+    }
+
+/* Botos xarxes socials */
+.xarxes-socials {
+    margin: 10px 35% 0 35%;
+    text-align: center;
+}
+/* Grid botons */
+@media (max-width: 600px) {
+    .xarxes-socials {
+        margin: 10px 20% 0 20%;
+    }
+} 
+.botons-xarxes {
+    display: inline-block;
+    text-align: center;
+}
+.botons-xarxes a {
+    background-color: rgb(26, 26, 26);
+    padding: 7px;
+    border: 2px solid rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+.botons-xarxes a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(26, 26, 26);
+}
