@@ -584,6 +584,12 @@ footer {
 .footer-dret ul li a:hover {
     color: #FFFFFF;
 }
+.footer-copy-text a {
+    color: rgb(199, 199, 199);
+}
+.footer-copy-text a:hover {
+    color: rgb(255, 255, 255);
+}
     /* Grid pre serveis */
     @media (max-width: 600px) {
         footer {

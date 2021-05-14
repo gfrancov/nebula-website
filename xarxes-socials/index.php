@@ -2,8 +2,8 @@
 
     // Declaració de diferents Xarxes Socials
     $twitter = "https://twitter.com/craftnebula";
-    $discord = "https://twitter.com/craftnebula";
-    $telegram = "https://twitter.com/craftnebula";
+    $discord = "https://discord.gg/RNTQbjcD4U";
+    $telegram = "https://t.me/nebulasuport";
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +25,7 @@
             <ul>
                 <li class="nav-seleccionat"><a href="../">Inici</a></li>
                 <li><a href="#">Serveis</a></li>
-                <li class="login"><a href="https://control.nebula.cat/">Login</a></li>
+                <li class="login"><a href="https://login.nebula.cat/">Login</a></li>
             </ul>
 
         </nav>
@@ -79,7 +79,7 @@
             <div class="footer-esq">
 
                 <img class="footer-logo" src="../img/logo-blanc.png" alt="Logo nebula footer"/>
-                <p class="footer-copy-text">Copyright &copy; 2021 Nebula Hosting</p>
+                <p class="footer-copy-text">Copyright &copy; 2021 Nebula Hosting</br>Desenvolupat per <a href="https://gabrielfranco.me">Gabi Franco</a></p>
 
             </div>
 
